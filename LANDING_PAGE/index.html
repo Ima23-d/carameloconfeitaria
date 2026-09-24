@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Confeitaria Caramelo | Bolos e tortas artesanais sob encomenda</title>
+  <meta name="description" content="Bolos recheados e tortas artesanais feitos em pequenos lotes. Loja 100% online, pedidos pelo WhatsApp.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+
+  <!-- Ilustração reutilizável. Troque os blocos .midia por <img> com fotos REAIS dos produtos. -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="bolo" viewBox="0 0 220 130">
+      <ellipse cx="110" cy="112" rx="100" ry="14" fill="#fff"/>
+      <polygon points="30,30 170,22 160,100 42,100" fill="#fff" stroke="#6e3543" stroke-width="1.5"/>
+      <polygon points="33,52 168,44 166,68 36,76" fill="#b56472" stroke="#6e3543" stroke-width="1.5"/>
+      <circle cx="102" cy="14" r="10" fill="#b56472"/>
+    </symbol>
+  </svg>
+
+  <header class="cabecalho">
+    <div class="conteiner cabecalho__interno">
+      <a href="#inicio" class="logo" aria-label="Confeitaria Caramelo - início">
+        <span class="logo__circulo"></span>Confeitaria Caramelo
+      </a>
+      <button class="botao-menu" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="menu" class="menu">
+        <a href="#produtos">Produtos</a>
+        <a href="#como-encomendar">Como encomendar</a>
+        <a href="#depoimentos">Depoimentos</a>
+        <a href="#" class="botao botao--primario botao--pequeno" data-whatsapp data-mensagem="Olá! Gostaria de fazer uma encomenda.">Fazer Encomenda</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERÓI (topo da página) -->
+    <section class="heroi" id="inicio">
+      <div class="conteiner heroi__interno">
+        <div class="heroi__texto">
+          <p class="chamada"><span class="chamada__ponto"></span>Produção artesanal • agenda limitada</p>
+          <h1>Momentos especiais merecem um sabor impossível de esquecer.</h1>
+          <p class="destaque">Bolos recheados e tortas feitos em pequenos lotes, com ingredientes selecionados e acabamento delicado — para transformar sua celebração em uma memória que começa pelo sabor.</p>
+          <div class="heroi__acoes">
+            <a href="#" class="botao botao--primario" data-whatsapp data-mensagem="Olá! Gostaria de fazer uma encomenda.">Fazer Encomenda</a>
+            <a href="#produtos" class="botao botao--contorno">Conhecer sabores</a>
+          </div>
+          <p class="observacao">Encomendas sob disponibilidade • Loja 100% online, sem endereço físico</p>
+        </div>
+        <figure class="midia midia--heroi">
+          <svg class="midia__arte" role="img" aria-label="Ilustração de bolo"><use href="#bolo"/></svg>
+          <figcaption>Foto real do produto</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- PRODUTOS -->
+    <section class="secao" id="produtos">
+      <div class="conteiner">
+        <p class="rotulo">Nossos produtos</p>
+        <h2>Favoritos que roubam a cena.</h2>
+        <p class="subtitulo">Receitas autorais, textura impecável e ingredientes escolhidos para entregar beleza e sabor na mesma medida.</p>
+
+        <div class="grade grade--3">
+          <article class="cartao">
+            <figure class="midia midia--cartao">
+              <svg class="midia__arte" role="img" aria-label="Ilustração de bolo"><use href="#bolo"/></svg>
+              <figcaption>Foto do produto</figcaption>
+            </figure>
+            <h3>Bolos Recheados</h3>
+            <p>Massas macias, recheios generosos e finalização artesanal pensada para combinar com a sua celebração.</p>
+            <p class="preco"><strong>R$ 00,00</strong> <span>• 00 fatias</span></p>
+            <a href="#" class="botao botao--contorno botao--pequeno" data-whatsapp data-mensagem="Olá! Gostaria de ver as opções de Bolos Recheados.">Ver opções</a>
+          </article>
+
+          <article class="cartao">
+            <figure class="midia midia--cartao">
+              <svg class="midia__arte" role="img" aria-label="Ilustração de torta"><use href="#bolo"/></svg>
+              <figcaption>Foto do produto</figcaption>
+            </figure>
+            <h3>Tortas Doces</h3>
+            <p>Bases crocantes, recheios cremosos e cobertura delicada para uma mesa elegante até o último detalhe.</p>
+            <p class="preco"><strong>R$ 00,00</strong> <span>• 00 fatias</span></p>
+            <a href="#" class="botao botao--contorno botao--pequeno" data-whatsapp data-mensagem="Olá! Gostaria de ver as opções de Tortas Doces.">Ver opções</a>
+          </article>
+
+          <article class="cartao">
+            <figure class="midia midia--cartao">
+              <svg class="midia__arte" role="img" aria-label="Ilustração de torta de frango"><use href="#bolo"/></svg>
+              <figcaption>Foto do produto</figcaption>
+            </figure>
+            <h3>Torta de Frango</h3>
+            <p>Massa leve e recheio caprichado, feita na hora da encomenda para agradar, surpreender e matar a fome com sabor.</p>
+            <p class="preco"><strong>R$ 00,00</strong> <span>• 00 fatias</span></p>
+            <a href="#" class="botao botao--contorno botao--pequeno" data-whatsapp data-mensagem="Olá! Gostaria de ver as opções de Torta de Frango.">Ver opções</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMO ENCOMENDAR -->
+    <section class="secao secao--rosada" id="como-encomendar">
+      <div class="conteiner">
+        <p class="rotulo">Como encomendar</p>
+        <h2>Seu pedido em três passos simples.</h2>
+        <p class="subtitulo">Sem formulários complicados. A gente entende a ocasião, orienta as melhores escolhas e confirma cada detalhe antes da produção.</p>
+
+        <ol class="grade grade--3 passos">
+          <li class="cartao cartao--passo">
+            <span class="passo__numero">01</span>
+            <h3>Escolha sua experiência</h3>
+            <p>Selecione o tipo de bolo ou torta que combina com o seu momento.</p>
+          </li>
+          <li class="cartao cartao--passo">
+            <span class="passo__numero">02</span>
+            <h3>Conte os detalhes</h3>
+            <p>Data, quantidade, sabores e referências. Nós ajudamos a fechar a melhor composição pelo WhatsApp.</p>
+          </li>
+          <li class="cartao cartao--passo">
+            <span class="passo__numero">03</span>
+            <h3>Confirme e aguarde</h3>
+            <p>Com tudo aprovado, sua encomenda entra na agenda de produção artesanal.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- PROVA SOCIAL -->
+    <section class="secao" id="depoimentos">
+      <div class="conteiner">
+        <p class="rotulo">Prova social</p>
+        <h2>O tipo de elogio que fica na memória.</h2>
+        <p class="subtitulo">Espaço preparado para inserir avaliações reais do WhatsApp, Instagram ou Google.</p>
+
+        <div class="grade grade--2">
+          <blockquote class="depoimento">
+            <p>“Todo mundo perguntou de onde era o bolo. Além de lindo, o sabor virou assunto durante a festa inteira.”</p>
+            <footer>Depoimento de cliente • substituir por prova real</footer>
+          </blockquote>
+          <blockquote class="depoimento">
+            <p>“A apresentação estava impecável e os doces desapareceram da mesa antes do fim do evento.”</p>
+            <footer>Depoimento de cliente • substituir por prova real</footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAIXA FINAL DE CHAMADA PARA AÇÃO -->
+    <section class="faixa-final">
+      <div class="conteiner faixa-final__interno">
+        <div>
+          <p class="faixa-final__rotulo">Agenda artesanal</p>
+          <h2>Reserve seu momento doce.</h2>
+          <p>As datas são limitadas para preservar o cuidado de cada produção.</p>
+        </div>
+        <a href="#" class="botao botao--claro" data-whatsapp data-mensagem="Olá! Quero reservar uma data na agenda.">Fazer Encomenda</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <div class="conteiner rodape__interno">
+      <div>
+        <p class="rodape__marca">Caramelo Confeitaria</p>
+        <p>Confeitaria artesanal para momentos que merecem ser lembrados.</p>
+      </div>
+      <div class="rodape__contato">
+        <p><strong>Contato</strong></p>
+        <p>WhatsApp • <a href="#" data-whatsapp data-texto="telefone">(82) 8122-6761</a></p>
+        <p>Instagram • <a href="https://www.instagram.com/caramelodfra/" data-instagram>@caramelodfra</a></p>
+        <p>Loja online • Atendimento sob encomenda</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Botão flutuante do WhatsApp (canal exclusivo de contato) -->
+  <a href="#" class="whatsapp-flutuante" data-whatsapp data-mensagem="Olá! Vim pelo site da Confeitaria Caramelo e gostaria de fazer um pedido." aria-label="Falar no WhatsApp">
+    <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+  </a>
+
+  <script src="js/principal.js"></script>
+</body>
+</html>
