@@ -60,6 +60,7 @@ h3 { font-size: 1.1rem; }
 .cabecalho__interno { display: flex; align-items: center; justify-content: space-between; height: 64px; }
 .logo { display: flex; align-items: center; gap: 10px; font: 700 1.15rem var(--fonte-titulo); text-decoration: none; }
 .logo__circulo { width: 28px; height: 28px; border-radius: 50%; background: var(--cor-blush-forte); border: 2px solid #d99a95; }
+.logo__imagem { width: auto; height: 46px; border-radius: 0; object-fit: contain; background: transparent; }
 .menu { display: flex; align-items: center; gap: 28px; font-size: 0.75rem; }
 .menu a:not(.botao) { text-decoration: none; color: var(--cor-cacau); }
 .menu a:not(.botao):hover { color: var(--cor-rosa-queimado); }
@@ -91,9 +92,11 @@ h3 { font-size: 1.1rem; }
 }
 .midia__arte { position: relative; width: 62%; height: auto; aspect-ratio: 220 / 130; }
 .midia figcaption { position: relative; font-size: 0.65rem; font-weight: 600; color: var(--cor-cacau); margin-top: 4px; }
-.midia img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; } /* para fotos reais */
-.midia--heroi { min-height: 330px; }
-.midia--cartao { min-height: 170px; border-radius: 16px; margin-bottom: 22px; }
+.midia img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; } /* para fotos reais */
+.midia--heroi { min-height: 0; height: auto; aspect-ratio: 4 / 3; }
+.midia--heroi::before { display: none; }
+.midia--heroi img { object-fit: cover; object-position: center; padding: 0; }
+.midia--cartao { min-height: 0; height: auto; aspect-ratio: 16 / 10; border-radius: 16px; margin-bottom: 22px; }
 
 /* ===== Seções ===== */
 .secao { padding: 72px 0; }
@@ -150,8 +153,35 @@ h3 { font-size: 1.1rem; }
 }
 .whatsapp-flutuante:hover { transform: scale(1.08); }
 
+/* ===== Carrossel de produtos (Splide dentro de .grade--3) ===== */
+.grade.splide { display: block; padding-bottom: 8px; }
+.grade.splide .splide__track { overflow: hidden; }
+.grade.splide .splide__list { display: flex; margin: 0; padding: 0; }
+.grade.splide .splide__slide { display: flex; height: auto; margin: 0; }
+.grade.splide .splide__slide .cartao { flex: 1 1 100%; height: 100%; margin: 0; display: flex; flex-direction: column; }
+.grade.splide .splide__slide .cartao .botao { margin-top: auto; align-self: flex-start; }
+.grade.splide .splide__slide .cartao .preco { margin-bottom: 14px; }
+.grade.splide .midia--cartao { min-height: 0; aspect-ratio: 16 / 10; }
+.grade.splide .midia--cartao img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; }
+.carrossel-produtos__cabecalho { display: flex; align-items: flex-end; justify-content: space-between; gap: 16px; }
+
+/* Setas ao lado e paginação fora dos cards */
+.grade.splide { position: relative; padding-inline: 60px; }
+.grade.splide .carrossel-produtos__navegacao { position: static; display: block; margin: 0; }
+.grade.splide .splide__arrow { position: absolute; top: 38%; transform: translateY(-50%); width: 44px; height: 44px; border-radius: 50%; border: 1.5px solid var(--cor-rosa-queimado); background: var(--cor-chantilly); color: var(--cor-rosa-queimado); font-size: 1.4rem; line-height: 1; opacity: 1; display: inline-flex; align-items: center; justify-content: center; cursor: pointer; z-index: 2; box-shadow: 0 4px 14px rgba(0, 0, 0, .08); }
+.grade.splide .splide__arrow--prev { left: 0; }
+.grade.splide .splide__arrow--next { right: 0; }
+.grade.splide .splide__arrow:hover { background: var(--cor-rosa-queimado); color: #fff; }
+.grade.splide .splide__arrow:disabled { opacity: .35; cursor: default; }
+.grade.splide .splide__arrow svg { width: 18px; height: 18px; }
+.grade.splide .splide__pagination { position: static; margin-top: 20px; padding: 0; justify-content: center; }
+.grade.splide .splide__pagination__page { background: var(--cor-linha); opacity: 1; }
+.grade.splide .splide__pagination__page.is-active { background: var(--cor-rosa-queimado); transform: scale(1.2); }
+
 /* ===== Responsivo (prioridade: celular) ===== */
 @media (max-width: 860px) {
+  .grade.splide { padding-inline: 0; }
+  .grade.splide .carrossel-produtos__navegacao { display: none; }
   .heroi { padding: 48px 0; }
   .heroi__interno { grid-template-columns: 1fr; gap: 36px; }
   .grade--3, .grade--2 { grid-template-columns: 1fr; }

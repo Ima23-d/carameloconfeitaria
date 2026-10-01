@@ -59,7 +59,27 @@ function configurarMenuCelular() {
   });
 }
 
+/* ===== Carrossel de produtos (múltiplos slides) ===== */
+function configurarCarrosselProdutos() {
+  const carrossel = document.getElementById("carrossel-produtos");
+  if (!carrossel || typeof Splide === "undefined") return;
+
+  new Splide("#carrossel-produtos", {
+    type: "loop",
+    perPage: 3,
+    perMove: 1,
+    gap: "20px",
+    pagination: true,
+    arrows: true,
+    breakpoints: {
+      1024: { perPage: 2 },
+      860: { perPage: 1, arrows: false },
+    },
+  }).mount();
+}
+
 /* ===== Inicialização ===== */
 montarLinksWhatsapp();
 montarLinksInstagram();
 configurarMenuCelular();
+configurarCarrosselProdutos();
