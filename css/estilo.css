@@ -103,6 +103,7 @@ h3 { font-size: 1.1rem; }
 .secao--rosada { background: var(--cor-blush); }
 .rotulo { margin: 0 0 12px; font-size: 0.65rem; font-weight: 600; color: var(--cor-rosa-queimado); text-transform: uppercase; letter-spacing: .08em; }
 .subtitulo { max-width: 62ch; margin: 12px 0 0; color: var(--cor-texto-suave); font-size: 0.85rem; }
+.secao-prova-social {max-width: 1200px; margin: 0 auto; padding: 0 2rem;}
 
 .grade { display: grid; gap: 20px; margin-top: 40px; }
 .grade--3 { grid-template-columns: repeat(3, 1fr); }
@@ -164,6 +165,24 @@ h3 { font-size: 1.1rem; }
 .grade.splide .midia--cartao { min-height: 0; aspect-ratio: 16 / 10; }
 .grade.splide .midia--cartao img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; }
 .carrossel-produtos__cabecalho { display: flex; align-items: flex-end; justify-content: space-between; gap: 16px; }
+
+
+
+/* ===== Carrossel de Cards Centralizado ===== */
+.secao-prova-social { max-width: 1200px; margin: 0 auto; padding: 4rem 2rem 3rem; }
+.secao-cabecalho { text-align: left; margin-bottom: 2rem; }
+.carrossel-coluna { display: flex; flex-direction: column; align-items: center; width: 100%; max-width: 1000px; margin: 0 auto; }
+.carrossel-container { position: relative; width: 100%; min-height: 200px; }
+.avaliacao-card { display: none; margin: 0; width: 100%; text-align: left; padding: 3.5rem 4rem; border-radius: 20px; box-sizing: border-box; }
+.avaliacao-card.ativa { display: block; }
+.avaliacao-card p { font-size: 1.35rem; line-height: 1.6; }
+.avaliacao-card footer { font-size: 1rem; margin-top: 1.25rem; }
+.carrossel-controles { display: flex; align-items: center; justify-content: center; gap: 1.5rem; margin-top: 2rem; }
+.carrossel-btn { background: var(--cor-blush); border: 1px solid #e6c0ba; width: 40px; height: 40px; border-radius: 50%; color: #5a3832; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all 0.2s; padding: 0; }
+.carrossel-btn:hover { background: #e6c0ba; color: #ffffff; transform: scale(1.05); }
+.carrossel-dots { display: flex; align-items: center; gap: 0.6rem; }
+.carrossel-dots button { width: 10px; height: 10px; border-radius: 50%; border: 1.5px solid #e6c0ba; background-color: var(--cor-blush); cursor: pointer; transition: all 0.3s; padding: 0; }
+.carrossel-dots button.ativa { background-color: #5a3832; border-color: #5a3832; width: 22px; border-radius: 10px; }
 
 /* Setas ao lado e paginação fora dos cards */
 .grade.splide { position: relative; padding-inline: 60px; }

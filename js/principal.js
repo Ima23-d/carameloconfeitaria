@@ -77,9 +77,56 @@ function configurarCarrosselProdutos() {
     },
   }).mount();
 }
+/* ===== Carrossel de feedbacks ===== */
+
+function iniciarCarrossel() {
+    const cards = document.querySelectorAll(".avaliacao-card");
+    const botoes = document.querySelectorAll(".carrossel-dots button");
+    const botaoAnterior = document.querySelector(".carrossel-btn--prev");
+    const botaoProximo = document.querySelector(".carrossel-btn--next");
+
+    if (cards.length === 0) return;
+
+    let indiceAtual = 0;
+
+    function mostrarCard(indice) {
+        cards.forEach((card, i) => {
+            card.classList.toggle("ativa", i === indice);
+        });
+
+        botoes.forEach((botao, i) => {
+            botao.classList.toggle("ativa", i === indice);
+        });
+
+        indiceAtual = indice;
+    }
+
+    if (botaoProximo) {
+        botaoProximo.addEventListener("click", function () {
+            mostrarCard((indiceAtual + 1) % cards.length);
+        });
+    }
+
+    if (botaoAnterior) {
+        botaoAnterior.addEventListener("click", function () {
+            mostrarCard((indiceAtual - 1 + cards.length) % cards.length);
+        });
+    }
+
+    botoes.forEach((botao, indice) => {
+        botao.addEventListener("click", function () {
+            mostrarCard(indice);
+        });
+    });
+
+    mostrarCard(0);
+}
+
+document.addEventListener("DOMContentLoaded", iniciarCarrossel);
+
 
 /* ===== Inicialização ===== */
 montarLinksWhatsapp();
 montarLinksInstagram();
 configurarMenuCelular();
-configurarCarrosselProdutos();
+configurarCarrosselProdutos();  

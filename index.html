@@ -11,7 +11,10 @@
   <link rel="icon" type="image/png" href="imgs/Logo.png">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
   <link rel="stylesheet" href="css/estilo.css">
+  <script src="js/principal.js" defer></script>
 </head>
+
+
 <body>
 
   <header class="cabecalho">
@@ -181,25 +184,65 @@
       </div>
     </section>
 
-    <!-- PROVA SOCIAL -->
-    <section class="secao" id="depoimentos">
-      <div class="conteiner">
-        <p class="rotulo">Prova social</p>
-        <h2>O tipo de elogio que fica na memória.</h2>
-        <p class="subtitulo">Espaço preparado para inserir avaliações reais do WhatsApp, Instagram ou Google.</p>
+<!-- Sessão de avaliações -->
+<section class="secao-prova-social" id="depoimentos">
+  <div class="container">
+    <div class="secao-cabecalho">
+      <p class="rotulo">PROVA SOCIAL</p>
+      <h2>Quem prova, recomenda.</h2>
+      <p class="subtitulo">
+        Confira algumas avaliações reais de quem já experimentou nossos produtos.
+      </p>
+    </div>
+    <div class="carrossel-coluna">
+      <div class="carrossel-container">
+    
+    <blockquote class="depoimento avaliacao-card ativa">
+      <p>"Esse bolo é daquelas comidas que a gente come fazendo dancinha. Perfeito, amore!!! Faça sempre, arrasou muito!!!"</p>
+      <footer>Avaliação de cliente via WhatsApp</footer>
+    </blockquote>
 
-        <div class="grade grade--2">
-          <blockquote class="depoimento">
-            <p>“Todo mundo perguntou de onde era o bolo. Além de lindo, o sabor virou assunto durante a festa inteira.”</p>
-            <footer>Depoimento de cliente • substituir por prova real</footer>
-          </blockquote>
-          <blockquote class="depoimento">
-            <p>“A apresentação estava impecável e os doces desapareceram da mesa antes do fim do evento.”</p>
-            <footer>Depoimento de cliente • substituir por prova real</footer>
-          </blockquote>
+    <blockquote class="depoimento avaliacao-card">
+      <p>"Minha amiga que bolo bom da boba, tô na terceira fatia já, se deixar eu como todo."</p>
+      <footer>Avaliação de cliente via WhatsApp</footer>
+    </blockquote>
+
+    <blockquote class="depoimento avaliacao-card">
+      <p>"Bolo aprovadissimo! Uma delícia! Fez sucesso"</p>
+      <footer>Avaliação de cliente via WhatsApp</footer>
+    </blockquote>
+
+    <blockquote class="depoimento avaliacao-card">
+      <p>"Meu Deus kkkkkkkk, sem condições esse bolo, é bom demais! A gente come falando o tempo todo: Meu Deus que delícia, que delícia"</p>
+      <footer>Avaliação de cliente via WhatsApp</footer>
+    </blockquote>
+    
+    <blockquote class="depoimento avaliacao-card ativa">
+          <p>"Super fofinho. Rsrs. Obrigada! Ficou excelente com café."</p>
+          <footer>Avaliação de cliente via WhatsApp</footer>
+    </blockquote>
+  </div>
+
+<div class="carrossel-controles">
+        <button class="carrossel-btn carrossel-btn--prev" aria-label="Anterior">
+          <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        </button>
+
+        <div class="carrossel-dots">
+          <button class="ativa"></button>
+          <button></button>
+          <button></button>
+          <button></button>
+          <button></button>
         </div>
+
+        <button class="carrossel-btn carrossel-btn--next" aria-label="Próximo">
+          <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </button>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
 
     <!-- FAIXA FINAL DE CHAMADA PARA AÇÃO -->
     <section class="faixa-final">
