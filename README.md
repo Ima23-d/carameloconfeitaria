@@ -1,6 +1,6 @@
-# Confeitaria Caramelo
+# Caramelo Confeitaria
 
-Site institucional e vitrine online da **Confeitaria Caramelo** — confeitaria artesanal sob encomenda (loja 100% online, pedidos pelo WhatsApp).
+Site institucional e vitrine online da **Caramelo Confeitaria** — confeitaria artesanal sob encomenda (loja 100% online, pedidos pelo WhatsApp).
 
 ## Tecnologias
 
